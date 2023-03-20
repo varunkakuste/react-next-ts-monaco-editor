@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import InputPanel from "./InputPanel";
 import QuestionPanel from "./QuestionPanel";
+import ResourceUtilization from "./ResourceUtilization";
 
 const defaultQuestion =
   "College Network provides the students of college to form a social networking platform among themselves, enabling them to connect with their seniors and juniors for sharing of information and resources. It provides user features to follow the students, send message to others, post what they like and ask for some queries on which like and comment feature is available. All the students registered may be seen college-wise and asked for help. Separate news board may be developed for each individual college.";
@@ -186,6 +187,16 @@ function CodeEditor(props: any) {
             <OutputPanel outputDetails={outputDetails} />
           </div>
         </div>
+
+        <div className="row">
+          <div className="col">{""}</div>
+          <div className="col">
+            {outputDetails && (
+              <ResourceUtilization resourceUtilization={outputDetails} />
+            )}
+          </div>
+        </div>
+
         <div className="row">
           <div className="col">{""}</div>
           <div className="col align-self-end">
