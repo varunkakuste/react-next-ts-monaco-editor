@@ -59,7 +59,7 @@ function LanguagePanel({ onLanguageSelection }: LanguagePanelProps) {
         placeholder={`Select Language`}
         options={languageOptions}
         //   styles={customStyles}
-        defaultValue={languageOptions[0]}
+        defaultValue={languageOptions[2]}
         onChange={(selectedLanguage) => onLanguageSelection(selectedLanguage)}
       />
     </>

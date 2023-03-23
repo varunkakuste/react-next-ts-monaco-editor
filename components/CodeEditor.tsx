@@ -10,19 +10,35 @@ import InputPanel from "./InputPanel";
 import QuestionPanel from "./QuestionPanel";
 import ResourceUtilization from "./ResourceUtilization";
 
-const defaultQuestion =
-  "College Network provides the students of college to form a social networking platform among themselves, enabling them to connect with their seniors and juniors for sharing of information and resources. It provides user features to follow the students, send message to others, post what they like and ask for some queries on which like and comment feature is available. All the students registered may be seen college-wise and asked for help. Separate news board may be developed for each individual college.";
+const defaultQuestion = `Write a program to add 2 numbers, print addition result, user's id & name. 
+    Please note: take required inputs from the Input section.`;
+
+const defaultQuestionsJavaBoilerPlateCode = `import java.util.*;
+class MyClass {
+    public void addAndPrint(int x, int y, String userName, int id) {
+        // implement me
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        // implement me
+    }
+}`;
 
 function CodeEditor(props: any) {
-  const [language, setLanguage] = useState(languageOptions[0]);
+  const [language, setLanguage] = useState(languageOptions[2]);
   const [theme, setTheme] = useState(themeOptions[1]);
-  const [code, setCode] = useState("// Add your code here");
+  const [code, setCode] = useState(defaultQuestionsJavaBoilerPlateCode);
   const [outputDetails, setOutputDetails] = useState(null);
   const [processing, setProcessing] = useState(false);
   const [input, setInput] = useState("");
   const [question, setQuestion] = useState(defaultQuestion);
 
   function handleSelectedLanguage(selectedLanguage: any) {
+    alert(selectedLanguage.id);
+    alert(selectedLanguage.value);
+    console.log(selectedLanguage);
     setLanguage(selectedLanguage);
   }
 

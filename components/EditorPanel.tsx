@@ -14,7 +14,7 @@ function EditorPanel({
   code,
   onCodeEditorChange,
 }: EditorPanelProps) {
-  const [value, setValue] = useState(code || "// Add your code here");
+  const [value, setValue] = useState(code);
 
   function handleCodeChange(value: any) {
     setValue(value);
@@ -27,7 +27,7 @@ function EditorPanel({
       <Editor
         className="border"
         height="50vh"
-        language={language || "javascript"}
+        language={language}
         value={value}
         theme={theme}
         onChange={handleCodeChange}
